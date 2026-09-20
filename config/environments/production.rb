@@ -26,7 +26,7 @@ Rails.application.configure do
     :address        => 'smtp.mailgun.org',
     :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
     :password       => ENV['MAILGUN_SMTP_PASSWORD'],
-    :domain         => sandbox42af793ddffd4ed7a9920e6a05ceeaa5.mailgun.org,
+    :domain         => host,
     :authentication => :plain,
   }
 
