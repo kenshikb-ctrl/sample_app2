@@ -1,5 +1,5 @@
 # メインのサンプルユーザーを1人作成する
-User.find_or_create_by!(name:  "Example User",
+User.create!(name:  "Example User",
              email: "example@railstutorial.org",
              password:              "tutorial",
              password_confirmation: "tutorial",
@@ -13,7 +13,7 @@ User.find_or_create_by!(name:  "Example User",
   name  = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
   password = "password"
-  User.find_or_create_by!(name:  name,
+  User.create!(name:  name,
                email: email,
                password:              password,
                password_confirmation: password,
