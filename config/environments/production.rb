@@ -19,14 +19,14 @@ Rails.application.configure do
 
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = 'sample-app2-dyea.onrender.com'
+  host = 'https://sample-app2-dyea.onrender.com'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
     :port           => 587,
     :address        => 'smtp.mailgun.org',
     :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
     :password       => ENV['MAILGUN_SMTP_PASSWORD'],
-    :domain         => host,
+    :domain         => sandbox42af793ddffd4ed7a9920e6a05ceeaa5.mailgun.org,
     :authentication => :plain,
   }
 
