@@ -7,10 +7,10 @@ class UsersController < ApplicationController
     @users = User.where(activated: true).paginate(page: params[:page])
   end
 
-
   def show
     @user = User.find(params[:id])
-    redirect_to root_url and return unless @user.activated?
+    redirect_to(root_url) unless @user.activated?
+    @microposts = @user.microposts.paginate(page: params[:page])
   end
 
   def new
@@ -54,16 +54,7 @@ class UsersController < ApplicationController
                                    :password_confirmation)
     end
 
-    # beforeフィルタ
-
-    # ログイン済みユーザーかどうか確認
-    def logged_in_user
-      unless logged_in?
-        store_location
-        flash[:danger] = "Please log in."
-        redirect_to login_url, status: :see_other
-      end
-    end
+    # beforeフィルター
 
     # 正しいユーザーかどうか確認
     def correct_user
@@ -75,5 +66,4 @@ class UsersController < ApplicationController
     def admin_user
       redirect_to(root_url, status: :see_other) unless current_user.admin?
     end
-    
 end
