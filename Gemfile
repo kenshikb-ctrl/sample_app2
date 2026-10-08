@@ -20,7 +20,6 @@ gem "jbuilder",        "2.11.5"
 gem "puma",            "5.6.8"
 gem "bootsnap",        "1.16.0", require: false
 gem "sqlite3",         "1.6.1"
-gem "pg"
 gem "concurrent-ruby", "1.3.4"
 
 group :development, :test do
@@ -44,10 +43,6 @@ group :test do
   gem "minitest-reporters",       "1.6.0"
   gem "guard",                    "2.18.0"
   gem "guard-minitest",           "2.4.6"
-end
-
-group :production do
-  gem "aws-sdk-s3", "1.114.0", require: false
 end
 
 # Windows ではタイムゾーン情報用の tzinfo-data gem を含める必要があります
