@@ -77,30 +77,10 @@ GEM
     ast (2.4.3)
     autoprefixer-rails (10.4.21.0)
       execjs (~> 2)
-    aws-eventstream (1.4.0)
-    aws-partitions (1.1293.0)
-    aws-sdk-core (3.254.1)
-      aws-eventstream (~> 1, >= 1.3.0)
-      aws-partitions (~> 1, >= 1.992.0)
-      aws-sigv4 (~> 1.9)
-      base64
-      bigdecimal
-      jmespath (~> 1, >= 1.6.1)
-      logger
-    aws-sdk-kms (1.130.0)
-      aws-sdk-core (~> 3, >= 3.254.0)
-      aws-sigv4 (~> 1.5)
-    aws-sdk-s3 (1.114.0)
-      aws-sdk-core (~> 3, >= 3.127.0)
-      aws-sdk-kms (~> 1)
-      aws-sigv4 (~> 1.4)
-    aws-sigv4 (1.12.1)
-      aws-eventstream (~> 1, >= 1.0.2)
     backport (1.2.0)
     base64 (0.2.0)
     bcrypt (3.1.18)
     benchmark (0.4.1)
-    bigdecimal (4.1.3)
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
@@ -168,7 +148,6 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
-    jmespath (1.6.2)
     json (2.13.2)
     kramdown (2.5.1)
       rexml (>= 3.3.9)
@@ -229,7 +208,6 @@ GEM
     parser (3.3.9.0)
       ast (~> 2.4.1)
       racc
-    pg (1.3.5)
     prism (1.4.0)
     pry (0.15.2)
       coderay (~> 1.1)
@@ -402,7 +380,6 @@ PLATFORMS
 
 DEPENDENCIES
   active_storage_validations (= 0.9.8)
-  aws-sdk-s3 (= 1.114.0)
   bcrypt (= 3.1.18)
   bootsnap (= 1.16.0)
   bootstrap-sass (= 3.4.1)
@@ -419,7 +396,6 @@ DEPENDENCIES
   jbuilder (= 2.11.5)
   minitest (= 5.18.0)
   minitest-reporters (= 1.6.0)
-  pg
   puma (= 5.6.8)
   rails (= 7.0.4.3)
   rails-controller-testing (= 1.0.5)
